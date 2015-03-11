@@ -1,33 +1,99 @@
 <!DOCTYPE html>
-<html lang="en-us">
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta charset="utf-8">
-    <title>eInsurance</title>
-    <meta name="viewport" content="width=1024">
-    <!--[if lt IE 9]><script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-    <link rel="stylesheet" type="text/css" media="screen" href="./css/screen_preview.css">
-    <script type="text/javascript" async="" src="./js/ga.js"></script>
-    <script src="./js/behavior.js"></script>
-
-    <link rel="shortcut icon" href="./favicon/favicon.ico">
- </head>
-<body gram_dict="true">
-        <div id="main">
-
-            <iframe id="preview" src="./eApp.html" frameborder="0" width="100%" height="578px"></iframe>
-        </div>
-        <script>
-                $(document).ready(function(){
-                        function fix_height(){
-                                var h = $("#tray").height();   
-                                $("#preview").attr("height", (($(window).height()) - h) + "px");
-                        }
-                        $(window).resize(function(){ fix_height(); }).resize();
-                        //$("#preview").contentWindow.focus();
-                });
-        </script>
+<html id="ng-app" ng-app="mainApp" lang="en-us">
+    <head>
+        <!-- Meta Tags -->
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
         
+        <title>eInsurance</title>
 
+        <!-- CSS -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/animate.min.css" rel="stylesheet">
+        <link href="css/font-awesome.min.css" rel="stylesheet">
+        <link href="css/form.css" rel="stylesheet">
+        <link href="css/calendar.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+        <link href="css/icons.css" rel="stylesheet">
+        <link href="css/generics.css" rel="stylesheet">
+
+        <!-- FavIcon -->
+        <link rel="shortcut icon" href="./favicon/favicon.ico">
+    </head>
+    <body id="skin-blur-blue2">
+        <div class="main-container">
+            <div ui-view></div>
+        </div>
+
+        <!-- Javascript Libraries -->
+        <!-- Angular JS-->
+        <script src="vendor/angular/angular.min.js"></script>
+        <script src="vendor/angular-ui-router/release/angular-ui-router.js"></script>
+        <script src="vendor/angular-sanitize/angular-sanitize.js"></script>
+        <script src="vendor/angular-resource/angular-resource.js"></script>
+        <!-- jQuery -->
+        <script src="vendor/jquery.min.js"></script>
+        <!-- jQuery Library -->
+        <script src="vendor/jquery-ui.min.js"></script>
+        <!-- jQuery UI -->
+        <script src="vendor/jquery.easing.1.3.js"></script>
+        <!-- jQuery Easing - Requirred for Lightbox + Pie Charts-->
+
+        <!-- Bootstrap -->
+        <script src="vendor/bootstrap.min.js"></script>
+
+        <!-- Charts -->
+        <script src="vendor/charts/jquery.flot.js"></script>
+        <!-- Flot Main -->
+        <script src="vendor/charts/jquery.flot.time.js"></script>
+        <!-- Flot sub -->
+        <script src="vendor/charts/jquery.flot.animator.min.js"></script>
+        <!-- Flot sub -->
+        <script src="vendor/charts/jquery.flot.resize.min.js"></script>
+        <!-- Flot sub - for repaint when resizing the screen -->
+
+        <script src="vendor/sparkline.min.js"></script>
+        <!-- Sparkline - Tiny charts -->
+        <script src="vendor/easypiechart.js"></script>
+        <!-- EasyPieChart - Animated Pie Charts -->
+        <script src="vendor/charts.js"></script>
+        <!-- All the above chart related functions -->
+
+        <!-- Map -->
+        <script src="vendor/maps/jvectormap.min.js"></script>
+        <!-- jVectorMap main library -->
+        <script src="vendor/maps/usa.js"></script>
+        <!-- USA Map for jVectorMap -->
+
+        <!--  Form Related -->
+        <script src="vendor/icheck.js"></script>
+        <!-- Custom Checkbox + Radio -->
+
+        <!-- UX -->
+        <script src="vendor/scroll.min.js"></script>
+        <!-- Custom Scrollbar -->
+
+        <!-- Other -->
+        <script src="vendor/calendar.min.js"></script>
+        <!-- Calendar -->
+        <script src="vendor/feeds.min.js"></script>
+     
+        <!--[if lt IE 9]><script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+        <!-- All Application JS functions -->
+        <!-- Static HTML javascript -->
+        <script src="app/functions.js"></script>
+
+        <!-- mainApp js files -->
+        <script src="app/main/app.js"></script>
+        <script src="app/lib/ng-table.js"></script>
+        <script src="app/login/loginCtrl.js"></script>
+        <script src="app/login/loginService.js"></script>
+        <script src="app/interview/interviewCtrl.js"></script>
+        <script src="app/dashboard/dashboardCtrl.js"></script>
+        
 </body>
+
 </html>
