@@ -4,6 +4,8 @@ mainApp.controller('insuredCtrl', function ($scope, $rootScope, $log, $state, $s
     $log.info('+ insuredCtrl()');
     $scope.test="ANGULAR TEST";
    // alpacaInsured
-
+    $scope.saveInsured = function(){
+    	alert("hi");
+    };
    
 });

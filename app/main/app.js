@@ -55,6 +55,11 @@ mainApp.config(function ($stateProvider, $urlRouterProvider, $httpProvider ) {
             url: '/insured',
             templateUrl: 'app/enrollment/insured.tpl.html',
             controller: 'insuredCtrl'
+        })
+        .state('owner', {
+            url: '/owner',
+            templateUrl: 'app/enrollment/owner.tpl.html',
+            controller: 'ownerCtrl'
         });
 
         //Re-directs

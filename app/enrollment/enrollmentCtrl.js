@@ -20,8 +20,11 @@ mainApp.controller('enrollmentCtrl', function ($scope, $rootScope, $log, $state,
         
     };
 
-     $scope.showInsured = function(){
+    $scope.showInsured = function(){
         $state.go("insured");
+    }
+    $scope.showOwner = function(){
+        $state.go("owner");
     }
     //Demo
    /* $scope.options = {

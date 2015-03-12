@@ -6,7 +6,7 @@
             "method":"post"
         },
         "buttons":{
-            "submit":{"onclick":"saveInsured()"},
+            "submit":{},
             "reset":{}
         }
     },

@@ -1,6 +1,6 @@
 <header id="header" class="media">
     <a href="" id="menu-toggle"></a>
-    <a class="logo pull-left" href="#/interview">eInsurance </a>
+    <a class="logo pull-left" href="#/enrollment">eInsurance </a>
 
     <div class="media-body" id="main">
         <div class="media" id="top-menu">
@@ -513,7 +513,7 @@
         <!-- Side Menu -->
         <ul class="list-unstyled side-menu">
             <li class="active">
-                <a class="sa-side-home" href="#/interview">
+                <a class="sa-side-home" href="#/enrollment">
                     <span class="menu-item">Dashboard</span>
                 </a>
             </li>
@@ -768,52 +768,23 @@
 
         <!-- Breadcrumb -->
         <ol class="breadcrumb hidden-xs">
-            <li class="active">Home</li>
+            <li><a href="#/interview">Home</a></li>
+            <li><a href="#/enrollment">Enrollment</a></li>
+            <li class="active">Owner</li>
         </ol>
 
         <h4 class="page-title">Welcome Home</h4>
         <!-- Content -->
-        <div class="block-area">
-            <div  class="jumbotron tile-light" ng-hide="started">
-                <h1>Hello, Welcome to eInsurance!</h1>
-                <p>Shall we start to plan your furture?. Rest assured - We’re Big, Safe and Friendly</p>
-                <div class="clearfix"></div>
-                <p class="text-center"><a data-drawer="info1" class="drawer-toggle btn btn-alt btn-lg" ng-click="started = true">Get Started</a></p>
-            </div>
-             <div id="info1" class="jumbotron tile-light drawer animated">
-                <h1 class="text-center" style="margin-top:20px;">Great! Let's get started then...</h1>
-                <p class="text-center">How do you like me to call you?</p>   
+        <div class="block-area ">
+        	<!--other classes for background design tile-light tile -->
+            <div  class="jumbotron tile-light" >
                
-                <div class="clearfix"></div>
-                <div class="col-lg-2 col-md-offset-5">
-                    <input type="text" class="form-control input-focused input-lg m-b-10" ng-model="name" placeholder="Name...">
-                </div>
-                
-                <div class="clearfix"></div>
-                <p class="text-center"><a class="btn btn-alt btn-lg" ng-click="named = true">Let's Go</a></p>
-
-                <div class="clearfix"></div>
-               
-            </div>
-
-            <div id="info2" class="jumbotron tile-light animated fadeIn"  ng-show="named">
-                <h2 class="text-center">Glad to meet you, {{name}} !!</h2>  
-                <p class="text-center">I was wondering as to what your birthdate would be...</p> 
-                <div class="clearfix"></div>
-                <div class="col-lg-2 col-md-offset-5">
-                <input type="text" class="input-focused input-lg form-control mask-date m-b-10" placeholder="12/12/1234" maxlength="10" autocomplete="off"> </div>
-                <div class="clearfix"></div>
-                <p class="text-center"><a class="btn btn-alt btn-lg" ng-click="showOptions()">Next</a></p>
-                 <div class="clearfix"></div>
+                <div id="alpacaOwner" alpaca-owner></div>
+            
             </div>
             
-
-
         </div>
-     
-
-
-        <!-- Chat -->
+        
         <div class="chat">
 
             <!-- Chat List -->
@@ -916,44 +887,5 @@
         </div>
     </section>
 
-    <!-- Older IE Message -->
-    <!--[if lt IE 9]>
-            <div class="ie-block">
-                <h1 class="Ops">Ooops!</h1>
-                <p>You are using an outdated version of Internet Explorer, upgrade to any of the following web browser in order to access the maximum functionality of this website. </p>
-                <ul class="browsers">
-                    <li>
-                        <a href="https://www.google.com/intl/en/chrome/browser/">
-                            <img src="img/browsers/chrome.png" alt="">
-                            <div>Google Chrome</div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="http://www.mozilla.org/en-US/firefox/new/">
-                            <img src="img/browsers/firefox.png" alt="">
-                            <div>Mozilla Firefox</div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="http://www.opera.com/computer/windows">
-                            <img src="img/browsers/opera.png" alt="">
-                            <div>Opera</div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="http://safari.en.softonic.com/">
-                            <img src="img/browsers/safari.png" alt="">
-                            <div>Safari</div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="http://windows.microsoft.com/en-us/internet-explorer/downloads/ie-10/worldwide-languages">
-                            <img src="img/browsers/ie.png" alt="">
-                            <div>Internet Explorer(New)</div>
-                        </a>
-                    </li>
-                </ul>
-                <p>Upgrade your browser for a Safer and Faster web experience. <br/>Thank you for your patience...</p>
-            </div>   
-        <![endif]-->
+    
 </section>
