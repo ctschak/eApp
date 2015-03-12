@@ -318,6 +318,18 @@ blockquote small {
 #top-menu .tm-icon:hover, #top-menu .tm-icon.open {
     /* background: rgba(0,0,0,0.2) */
 }
+.extra-lg-font{ font-size: 130px; }
+.percent-width{
+    position: absolute;
+    text-align: center;
+    width: 130%;
+    margin-top: 36px;
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.68);
+    text-shadow: none;
+    padding-left: 2px;
+
+}
 
 #top-menu > .media-body {
     padding: 7px 7px 6px 5px;
@@ -1166,7 +1178,6 @@ hr {
 .dropdown-menu-alt .divider {
     background-color: rgba(255, 255, 255, 0.12);
 }
-
 
 .profile-menu {
     background: transparent;

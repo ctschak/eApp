@@ -559,7 +559,6 @@ $(function() {
             $(this.el).find('.percent').text(Math.round(percent));
         }
     });
-
     var chart = window.chart = $('.pie-chart-tiny').data('easyPieChart');
     $('.pie-chart-tiny .pie-title > i').on('click', function() {
         $(this).closest('.pie-chart-tiny').data('easyPieChart').update(Math.random()*200-100);

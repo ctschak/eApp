@@ -10,7 +10,8 @@
 var mainApp = angular.module("mainApp",[
 	'ngTable',
 	'ngResource',
-    'ui.router'
+    'ui.router',
+    'easypiechart'
 ]);
 
 mainApp.config(function ($stateProvider, $urlRouterProvider, $httpProvider ) {
@@ -44,6 +45,16 @@ mainApp.config(function ($stateProvider, $urlRouterProvider, $httpProvider ) {
             url: '/dashboard',
             templateUrl: 'app/dashboard/dashboard.tpl.html',
             controller: 'dashboardCtrl'
+        })
+        .state('enrollment', {
+            url: '/enrollment',
+            templateUrl: 'app/enrollment/enrollment.tpl.html',
+            controller: 'enrollmentCtrl'
+        })
+        .state('insured', {
+            url: '/insured',
+            templateUrl: 'app/enrollment/insured.tpl.html',
+            controller: 'insuredCtrl'
         });
 
         //Re-directs

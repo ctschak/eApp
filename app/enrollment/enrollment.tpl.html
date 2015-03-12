@@ -775,47 +775,153 @@
 
         <h4 class="page-title">Welcome Home</h4>
         <!-- Content -->
-        <div class="block-area">
-            <div  class="jumbotron tile-light" ng-hide="started">
-                <h1>Hello, Welcome to eInsurance!</h1>
-                <p>Shall we start to plan your furture?. Rest assured - We’re Big, Safe and Friendly</p>
-                <div class="clearfix"></div>
-                <p class="text-center"><a data-drawer="info1" class="drawer-toggle btn btn-alt btn-lg" ng-click="started = true">Get Started</a></p>
-            </div>
-             <div id="info1" class="jumbotron tile-light drawer animated">
-                <h1 class="text-center" style="margin-top:20px;">Great! Let's get started then...</h1>
-                <p class="text-center">How do you like me to call you?</p>   
-               
-                <div class="clearfix"></div>
-                <div class="col-lg-2 col-md-offset-5">
-                    <input type="text" class="form-control input-focused input-lg m-b-10" ng-model="name" placeholder="Name...">
-                </div>
+        <div class="block-area ">
+        	<!--other classes for background design tile-light tile -->
+            <div  class="jumbotron tile-light" >
+               <div class="row">
+	               	<div class="col-xs-4 col-sm-2">
+	               		<span class="icon extra-lg-font"><i class="fa fa-user-plus"></i></span>
+	               		<!-- img src="img/enrollment/user-info.png" class="img-rounded m-r-10 m-b-10" width="148px" height="148px;" alt="" -->
+	           		</div>
+	           		<div class="col-xs-6 col-sm-5" style="top:70px">
+	           			<h2 class="text-left">Proposed Insured / Owner</h2>
+	           		</div>
+	           		
+	           		<div class="col-xs-2 col-sm-1 clearfix" style="height:200px;width:2px;background-color: rgba(255, 255, 255, 0.12);padding:0px;"></div>
+
+                    <div class="col-xs-6 col-sm-3" style="top:50px">
+	                    <div class="block-area" id="block-level">
+		                    <button class="btn btn-block m-b-10" ng-click="showInsured()">Insured</button>
+		                    <button class="btn btn-block m-b-10">Owner</button>
+	                	</div>
+                	</div>
+
+                	 <div class="col-xs-2 col-sm-1 clearfix" style="height:200px;width:2px;background-color: rgba(255, 255, 255, 0.12);padding:0px;"></div>
+
+                	<div class="col-xs-4 col-sm-1" style="top:50px;left:25px;">
+	                    <div easypiechart options="options" align="center" percent="percent">
+	                    	<span class="percent-width">{{percent}}%</span></div>
+	                </div>
+           		</div>
                 
-                <div class="clearfix"></div>
-                <p class="text-center"><a class="btn btn-alt btn-lg" ng-click="named = true">Let's Go</a></p>
-
-                <div class="clearfix"></div>
-               
-            </div>
-
-            <div id="info2" class="jumbotron tile-light animated fadeIn"  ng-show="named">
-                <h2 class="text-center">Glad to meet you, {{name}} !!</h2>  
-                <p class="text-center">I was wondering as to what your birthdate would be...</p> 
-                <div class="clearfix"></div>
-                <div class="col-lg-2 col-md-offset-5">
-                <input type="text" class="input-focused input-lg form-control mask-date m-b-10" placeholder="12/12/1234" maxlength="10" autocomplete="off"> </div>
-                <div class="clearfix"></div>
-                <p class="text-center"><a class="btn btn-alt btn-lg" ng-click="showOptions()">Next</a></p>
-                 <div class="clearfix"></div>
-            </div>
             
+            </div>
+            <div  class="jumbotron tile-light" >
+               <div class="row">
+	               	<div class="col-xs-4 col-sm-2">
+	               		<span class="icon extra-lg-font"><i class="fa fa-users"></i></span>
+	               		<!-- img src="img/enrollment/user-info.png" class="img-rounded m-r-10 m-b-10" width="148px" height="148px;" alt="" -->
+	           		</div>
+	           		<div class="col-xs-6 col-sm-5" style="top:70px">
+	           			<h2 class="text-left">Beneficiary Details</h2>
+	           		</div>
+	           		
+	           		<div class="col-xs-2 col-sm-1 clearfix" style="height:200px;width:2px;background-color: rgba(255, 255, 255, 0.12);padding:0px;"></div>
 
+                    <div class="col-xs-6 col-sm-3" style="top:70px">
+	                    <div class="block-area" id="block-level">
+		                    <button class="btn btn-block m-b-10">Beneficiary</button>
+						</div>
+                	</div>
+
+                	 <div class="col-xs-2 col-sm-1 clearfix" style="height:200px;width:2px;background-color: rgba(255, 255, 255, 0.12);padding:0px;"></div>
+
+                	<div class="col-xs-4 col-sm-1" style="top:50px;left:25px;">
+	                    <div easypiechart options="options" align="center" percent="percent">
+	                    	<span class="percent-width">{{percent}}%</span></div>
+	                </div>
+           		</div>
+                
+            </div>
+
+            <div  class="jumbotron tile-light" >
+               <div class="row">
+	               	<div class="col-xs-4 col-sm-2">
+	               		<span class="icon extra-lg-font"><i class="fa fa-list-alt"></i></span>
+	               		<!-- img src="img/enrollment/user-info.png" class="img-rounded m-r-10 m-b-10" width="148px" height="148px;" alt="" -->
+	           		</div>
+	           		<div class="col-xs-6 col-sm-5" style="top:70px">
+	           			<h2 class="text-left">Proposed Coverage</h2>
+	           		</div>
+	           		
+	           		<div class="col-xs-2 col-sm-1 clearfix" style="height:200px;width:2px;background-color: rgba(255, 255, 255, 0.12);padding:0px;"></div>
+
+                    <div class="col-xs-6 col-sm-3" >
+	                    <div class="block-area" id="block-level">
+		                    <button class="btn btn-block m-b-10">Coverage</button>
+		                    <button class="btn btn-block m-b-10">Riders</button>
+		                    <button class="btn btn-block m-b-10">Dividend Option</button>
+		                    <button class="btn btn-block m-b-10">Policy Options</button>
+	                	</div>
+                	</div>
+
+                	 <div class="col-xs-2 col-sm-1 clearfix" style="height:200px;width:2px;background-color: rgba(255, 255, 255, 0.12);padding:0px;"></div>
+
+                	<div class="col-xs-4 col-sm-1" style="top:50px;left:25px;">
+	                    <div easypiechart options="options" align="center" percent="percent">
+	                    	<span class="percent-width">{{percent}}%</span></div>
+	                </div>
+           		</div>
+                
+            </div>
+            <div  class="jumbotron tile-light" >
+               <div class="row">
+	               	<div class="col-xs-4 col-sm-2">
+	               		<span class="icon extra-lg-font"><i class="fa fa-shield"></i></span>
+	               		<!-- img src="img/enrollment/user-info.png" class="img-rounded m-r-10 m-b-10" width="148px" height="148px;" alt="" -->
+	           		</div>
+	           		<div class="col-xs-6 col-sm-5" style="top:70px">
+	           			<h2 class="text-left">Risk Questionnaire</h2>
+	           		</div>
+	           		
+	           		<div class="col-xs-2 col-sm-1 clearfix" style="height:200px;width:2px;background-color: rgba(255, 255, 255, 0.12);padding:0px;"></div>
+
+                    <div class="col-xs-6 col-sm-3" style="top:70px">
+	                    <div class="block-area" id="block-level">
+		                    <button class="btn btn-block m-b-10">General Risk Question</button>
+						</div>
+                	</div>
+
+                	 <div class="col-xs-2 col-sm-1 clearfix" style="height:200px;width:2px;background-color: rgba(255, 255, 255, 0.12);padding:0px;"></div>
+
+                	<div class="col-xs-4 col-sm-1" style="top:50px;left:25px;">
+	                    <div easypiechart options="options" align="center" percent="percent">
+	                    	<span class="percent-width">{{percent}}%</span></div>
+	                </div>
+           		</div>
+                
+            </div>
+            <div  class="jumbotron tile-light" >
+               <div class="row">
+	               	<div class="col-xs-4 col-sm-2">
+	               		<span class="icon extra-lg-font"><i class="fa fa-user-md"></i></span>
+	               		<!-- img src="img/enrollment/user-info.png" class="img-rounded m-r-10 m-b-10" width="148px" height="148px;" alt="" -->
+	           		</div>
+	           		<div class="col-xs-6 col-sm-5" style="top:70px">
+	           			<h2 class="text-left">Personal Physician</h2>
+	           		</div>
+	           		
+	           		<div class="col-xs-2 col-sm-1 clearfix" style="height:200px;width:2px;background-color: rgba(255, 255, 255, 0.12);padding:0px;"></div>
+
+                    <div class="col-xs-6 col-sm-3" style="top:50px">
+	                    <div class="block-area" id="block-level">
+		                    <button class="btn btn-block m-b-10">Physician Info</button>
+		                    <button class="btn btn-block m-b-10">Treatment</button>
+	                	</div>
+                	</div>
+
+                	 <div class="col-xs-2 col-sm-1 clearfix" style="height:200px;width:2px;background-color: rgba(255, 255, 255, 0.12);padding:0px;"></div>
+
+                	<div class="col-xs-4 col-sm-1" style="top:50px;left:25px;">
+	                    <div easypiechart options="options" align="center" percent="percent">
+	                    	<span class="percent-width">{{percent}}%</span></div>
+	                </div>
+           		</div>
+                
+            </div>
 
         </div>
-     
-
-
-        <!-- Chat -->
+        
         <div class="chat">
 
             <!-- Chat List -->
@@ -918,44 +1024,5 @@
         </div>
     </section>
 
-    <!-- Older IE Message -->
-    <!--[if lt IE 9]>
-            <div class="ie-block">
-                <h1 class="Ops">Ooops!</h1>
-                <p>You are using an outdated version of Internet Explorer, upgrade to any of the following web browser in order to access the maximum functionality of this website. </p>
-                <ul class="browsers">
-                    <li>
-                        <a href="https://www.google.com/intl/en/chrome/browser/">
-                            <img src="img/browsers/chrome.png" alt="">
-                            <div>Google Chrome</div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="http://www.mozilla.org/en-US/firefox/new/">
-                            <img src="img/browsers/firefox.png" alt="">
-                            <div>Mozilla Firefox</div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="http://www.opera.com/computer/windows">
-                            <img src="img/browsers/opera.png" alt="">
-                            <div>Opera</div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="http://safari.en.softonic.com/">
-                            <img src="img/browsers/safari.png" alt="">
-                            <div>Safari</div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="http://windows.microsoft.com/en-us/internet-explorer/downloads/ie-10/worldwide-languages">
-                            <img src="img/browsers/ie.png" alt="">
-                            <div>Internet Explorer(New)</div>
-                        </a>
-                    </li>
-                </ul>
-                <p>Upgrade your browser for a Safer and Faster web experience. <br/>Thank you for your patience...</p>
-            </div>   
-        <![endif]-->
+    
 </section>
